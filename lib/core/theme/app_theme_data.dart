@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppThemeData {
   static const Color _primaryColor = Color(0xFF7a5d3e);
@@ -41,8 +42,20 @@ class AppThemeData {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
-      hintStyle: const TextStyle(
-        color: Color(0xff494A57),
+      hintStyle: GoogleFonts.plusJakartaSans(
+        fontSize: 13,
+        fontWeight: FontWeight.w600,
+        color: const Color(0xff494A57),
+      ),
+      labelStyle: GoogleFonts.plusJakartaSans(
+        fontSize: 13,
+        fontWeight: FontWeight.w600,
+        color: const Color(0xff494A57),
+      ),
+      errorStyle: GoogleFonts.plusJakartaSans(
+        fontSize: 12,
+        fontWeight: FontWeight.w500,
+        color: _inputErrorColor,
       ),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(12.0),
@@ -71,6 +84,29 @@ class AppThemeData {
       ),
       fillColor: _inputFillColor,
       filled: true,
+    ),
+    textTheme: GoogleFonts.plusJakartaSansTextTheme().copyWith(
+      bodyMedium: const TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.normal,
+      ),
+      titleSmall: const TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+        color: Color(0xff212229),
+        letterSpacing: -1.7,
+      ),
+      bodyLarge: const TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w500,
+        color: Color(0xff9496AA),
+        letterSpacing: -0.7,
+      ),
+      labelMedium: const TextStyle(
+        fontSize: 13,
+        fontWeight: FontWeight.w600,
+        color: Color(0xff494A57),
+      ),
     ),
   );
 }
