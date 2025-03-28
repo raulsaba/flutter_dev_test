@@ -15,6 +15,9 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            const Spacer(
+              flex: 1,
+            ),
             Stack(
               children: [
                 Positioned(
@@ -75,13 +78,9 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+            const Spacer(
+              flex: 2,
+            ),
             TextButton(
               onPressed: () {},
               child: const Text("Esqueci a senha"),
