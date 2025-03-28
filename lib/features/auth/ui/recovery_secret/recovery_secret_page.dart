@@ -61,7 +61,7 @@ class RecoverySecretPage extends StatelessWidget {
                           ),
                         ),
                         errorBorder: const OutlineInputBorder(
-                          borderRadius: const BorderRadius.all(Radius.circular(8)),
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
                           borderSide: BorderSide(
                             color: Color(0xFFD36161),
                             width: 2,
