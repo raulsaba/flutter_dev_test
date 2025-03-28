@@ -36,8 +36,37 @@ class RecoverySecretPage extends StatelessWidget {
                       keyboardType: TextInputType.number,
                       textAlign: TextAlign.center,
                       maxLength: 1,
-                      decoration: const InputDecoration(
+                      style: Theme.of(context).textTheme.titleSmall,
+                      decoration: InputDecoration(
                         counterText: "",
+                        border: const OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          borderSide: BorderSide(
+                            color: Color(0xffE7E7EF),
+                            width: 1,
+                          ),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: const BorderRadius.all(Radius.circular(8)),
+                          borderSide: BorderSide(
+                            color: Theme.of(context).colorScheme.primary,
+                            width: 2,
+                          ),
+                        ),
+                        focusedErrorBorder: const OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          borderSide: BorderSide(
+                            color: Color(0xFFD36161),
+                            width: 2,
+                          ),
+                        ),
+                        errorBorder: const OutlineInputBorder(
+                          borderRadius: const BorderRadius.all(Radius.circular(8)),
+                          borderSide: BorderSide(
+                            color: Color(0xFFD36161),
+                            width: 2,
+                          ),
+                        ),
                       ),
                     ),
                   ),
