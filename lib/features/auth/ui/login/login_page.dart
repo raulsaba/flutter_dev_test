@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dev_test/features/auth/ui/login/resources/login_page_assets.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -12,15 +15,36 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              height: 200,
-              color: Colors.blue,
-              child: const Center(
-                child: Text(
-                  'Logo',
-                  style: TextStyle(color: Colors.white, fontSize: 24),
+            Stack(
+              children: [
+                Positioned(
+                  top: 10,
+                  left: 0,
+                  right: 0,
+                  child: SvgPicture.asset(
+                    LoginPageAssets.vector01,
+                    fit: BoxFit.fitWidth,
+                    width: MediaQuery.of(context).size.width,
+                    // height: 120,
+                  ),
                 ),
-              ),
+                Positioned(
+                  top: 110,
+                  left: 0,
+                  right: 0,
+                  child: SvgPicture.asset(
+                    LoginPageAssets.vector02,
+                    fit: BoxFit.fitWidth,
+                    width: MediaQuery.of(context).size.width,
+                  ),
+                ),
+                Center(
+                  child: Image.asset(
+                    LoginPageAssets.image,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 20, 20, 5),
@@ -43,8 +67,10 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: FilledButton(
-                onPressed: () {},
-                child: Center(
+                onPressed: () {
+                  context.go("/recovery-secret");
+                },
+                child: const Center(
                   child: Text("Entrar"),
                 ),
               ),
