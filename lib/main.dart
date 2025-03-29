@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev_test/core/router/go_router.dart';
-import 'package:flutter_dev_test/core/theme/app_theme_data.dart';
+import 'core/get_it/get_it_config.dart';
+import 'core/router/go_router.dart';
+import 'core/theme/app_theme_data.dart';
 
-void main() {
+Future<void> main() async {
+  await configureDependencies();
   runApp(const MyApp());
 }
 

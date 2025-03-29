@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev_test/features/auth/ui/recovery_secret/components/code_component.dart';
-import 'package:flutter_dev_test/features/auth/ui/recovery_secret/resources/recovery_secret_page_assets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+
+import 'components/recovery_secret_component.dart';
+import 'resources/recovery_secret_page_assets.dart';
 
 class RecoverySecretPage extends StatelessWidget {
   const RecoverySecretPage({super.key});
@@ -28,15 +29,7 @@ class RecoverySecretPage extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: 64),
-            const CodeComponent(),
-            const SizedBox(height: 32),
-            SizedBox(
-              width: double.infinity,
-              child: FilledButton(
-                onPressed: () {},
-                child: const Text("Confirmar"),
-              ),
-            ),
+            const RecoverySecretyComponent(),
             const SizedBox(height: 32),
             Center(
               child: TextButton(

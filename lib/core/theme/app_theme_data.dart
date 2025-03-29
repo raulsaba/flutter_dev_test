@@ -12,6 +12,14 @@ class AppThemeData {
     colorSchemeSeed: _primaryColor,
     brightness: Brightness.light,
     scaffoldBackgroundColor: _backgroundColor,
+    snackBarTheme: SnackBarThemeData(
+      backgroundColor: const Color(0xff212229),
+      contentTextStyle: GoogleFonts.plusJakartaSans(
+        fontSize: 12,
+        fontWeight: FontWeight.w500,
+        color: Colors.white,
+      ),
+    ),
     appBarTheme: const AppBarTheme(
       backgroundColor: _backgroundColor,
       foregroundColor: _primaryColor,

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dev_test/features/auth/ui/login/resources/login_page_assets.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
+
+import 'components/login_component.dart';
+import 'resources/login_page_assets.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -28,7 +29,6 @@ class LoginPage extends StatelessWidget {
                     LoginPageAssets.vector01,
                     fit: BoxFit.fitWidth,
                     width: MediaQuery.of(context).size.width,
-                    // height: 120,
                   ),
                 ),
                 Positioned(
@@ -49,35 +49,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 20, 20, 5),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  labelText: 'Usuário',
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(20, 5, 20, 20),
-              child: TextFormField(
-                obscureText: true,
-                obscuringCharacter: "*",
-                decoration: const InputDecoration(
-                  labelText: 'Senha',
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: FilledButton(
-                onPressed: () {
-                  context.go("/recovery-secret");
-                },
-                child: const Center(
-                  child: Text("Entrar"),
-                ),
-              ),
-            ),
+            const LoginComponent(),
             const Spacer(
               flex: 2,
             ),
