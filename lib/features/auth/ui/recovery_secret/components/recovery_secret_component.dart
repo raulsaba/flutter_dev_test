@@ -88,6 +88,13 @@ class _RecoverySecretyComponentState extends State<RecoverySecretyComponent> {
                   onPressed: () {
                     if (code.length == 6) {
                       context.read<RecoverySecretBloc>().add(RecoverySecretRequestEvent(code: code));
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text("Preencha o código de recuperação"),
+                          duration: Duration(seconds: 5),
+                        ),
+                      );
                     }
                   },
                   child: const Text("Confirmar"),
